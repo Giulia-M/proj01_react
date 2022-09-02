@@ -1,5 +1,5 @@
 import { Component } from "react";
-import './App.css';
+import './css/Band.css';
 
 class Users extends Component {
     constructor() {
@@ -52,7 +52,7 @@ class Users extends Component {
             return x.name.toLocaleLowerCase().includes(searchField)})
 
         return (
-            <div className="App App-header">
+            <div className="App App-prova">
                 <div>
                     {/* <input className="search" type="search" placeholder="search" onChange={this.onSearchChange} /> */}
                     <input className="search" type="search" placeholder="search" onChange={onSearchChange} />

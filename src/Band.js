@@ -1,5 +1,5 @@
 import { Component } from "react";
-import './App.css';
+import './css/App.css';
 
 class Band extends Component {
     constructor() {
@@ -24,7 +24,7 @@ class Band extends Component {
 
     render() {
         return (
-            <div className="App App-header">
+            <div className="App App-prova">
                 {this.state.band.map((cantante) => {
                     return <div key={cantante.id}>
                                 <h1>{cantante.name}</h1>    
