@@ -1,7 +1,10 @@
 import { Component } from 'react';
 import './css/Band.css';
+import CardList from './components/card-list/card-list.component';
 
-
+// Il componente è una parte che governa l'interfaccia utente. 
+// Un componente ha lo scopo di legare insieme la rappresentazione visiva e la rappresentazione funzionale dell'UI, oltre a legare insieme 
+// porzioni riutilizzabili del codice in un unico segmento. 
 
 class Prova extends Component {
     constructor() {
@@ -38,6 +41,7 @@ class Prova extends Component {
                         );
                         this.changeTextButton("Fatto!")
                 }}>{buttonText}</button>
+                <CardList />
             </div>
             
        
