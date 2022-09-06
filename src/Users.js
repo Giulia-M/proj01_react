@@ -1,6 +1,7 @@
 import { Component } from "react";
 import './css/Band.css';
-
+import CardList from './components/card-list/card-list.component';
+import SearchBox from "./components/search-box/search-box.component";
 class Users extends Component {
     constructor() {
         super();
@@ -55,8 +56,8 @@ class Users extends Component {
             <div className="App App-prova">
                 <div>
                     {/* <input className="search" type="search" placeholder="search" onChange={this.onSearchChange} /> */}
-                    <input className="search" type="search" placeholder="search" onChange={onSearchChange} />
-                   
+                    {/* <input className="search" type="search" placeholder="search" onChange={onSearchChange} /> */}
+                    <SearchBox className='search' onChangeHandler={onSearchChange} placeholder='search cantanti'/>
                   {/*
                    ogni volta che si esegue il render questa funzione anonima viene creata e distrutta ogni volta, non è stata archiviata in memoria da nessuna parte 
                     problema di performance quindi possiamo creare un metodo *onSearchChange
@@ -91,11 +92,13 @@ class Users extends Component {
                             <h1>{user.name}</h1>
                     </div>
                 })} */}
-                {filteredBand.map((user) => {
+                {/* {filteredBand.map((user) => {
                     return <div key={user.id}>
                             <h1>{user.name}</h1>
                     </div>
-                })}
+                })} */}
+
+                <CardList x={filteredBand } anything={['a', 'b']} />
             </div>
         )
     }

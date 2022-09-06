@@ -41,7 +41,7 @@ class Prova extends Component {
                         );
                         this.changeTextButton("Fatto!")
                 }}>{buttonText}</button>
-                <CardList />
+               
             </div>
             
        
