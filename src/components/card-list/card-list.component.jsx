@@ -9,7 +9,7 @@ class CardList extends Component {
 
         const { x } = this.props;
         return (
-            <div>
+            <div className="App App-prova">
 
                 {x.map((cant) => {
                     return <h1 key={cant.id}>{cant.name}</h1>

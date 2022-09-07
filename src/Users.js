@@ -53,8 +53,8 @@ class Users extends Component {
             return x.name.toLocaleLowerCase().includes(searchField)})
 
         return (
-            <div className="App App-prova">
-                <div>
+            <div >
+                <div className="App App-prova">
                     {/* <input className="search" type="search" placeholder="search" onChange={this.onSearchChange} /> */}
                     {/* <input className="search" type="search" placeholder="search" onChange={onSearchChange} /> */}
                     <SearchBox className='search' onChangeHandler={onSearchChange} placeholder='search cantanti'/>
@@ -85,6 +85,8 @@ class Users extends Component {
                         })
                     }}/>
                     */}
+
+                    <CardList x={filteredBand } anything={['a', 'b']} />
                 
                 </div>
                 {/* {this.state.usersBand.map((user) => {
@@ -98,7 +100,7 @@ class Users extends Component {
                     </div>
                 })} */}
 
-                <CardList x={filteredBand } anything={['a', 'b']} />
+                
             </div>
         )
     }
