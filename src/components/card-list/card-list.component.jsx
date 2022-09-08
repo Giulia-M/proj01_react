@@ -1,4 +1,7 @@
 import { Component } from "react";
+import '../../css/card-list.styles.css';
+import '../../css/card.styles.css';
+
 class CardList extends Component {
     render() {
         console.log(this.props);
@@ -9,13 +12,21 @@ class CardList extends Component {
 
         const { x } = this.props;
         return (
-            <div className="App App-prova">
+            <div className=" card-list">
 
                 {x.map((cant) => {
-                    return <h1 key={cant.id}>{cant.name}</h1>
+                    const { name, id, email } = cant;
+                    return (
+                        <div key={id} className="card-container">
+                            <div>
+                                <img src={`https://robohash.org/${id}?set=set4&size=100x100`} alt={name} />
+                            </div>
+                            <h5>{name}</h5>
+                            <p>{email}</p>
+                        </div>
+                    )
                 })}
-
-            </div>
+            </div >
 
         )
     }
