@@ -2,6 +2,7 @@ import { Component } from "react";
 import './css/Band.css';
 import CardList from './components/card-list/card-list.component';
 import SearchBox from "./components/search-box/search-box.component";
+
 class Users extends Component {
     constructor() {
         super();
@@ -55,6 +56,7 @@ class Users extends Component {
         return (
             <div >
                 <div className="App App-prova">
+                    <h2 className="title-app">Ricerca il tuo gatto</h2>
                     {/* <input className="search" type="search" placeholder="search" onChange={this.onSearchChange} /> */}
                     {/* <input className="search" type="search" placeholder="search" onChange={onSearchChange} /> */}
                     <SearchBox className='search' onChangeHandler={onSearchChange} placeholder='search cantanti'/>
