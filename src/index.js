@@ -6,6 +6,7 @@ import Prova from './Prova';
 import reportWebVitals from './reportWebVitals';
 import Band from './Band';
 import Users from './Users';
+import Componentefunzionale from './Componentefunzionale';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
     <Prova />
     <Band />
     <Users />
+    <Componentefunzionale/>
 
   </React.StrictMode>
 );
