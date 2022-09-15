@@ -15,7 +15,7 @@ class Users extends Component {
         console.log('constructor')
     }
 
-    //metodo ciclo di vita dei componenti
+    //metodo ciclo di vita dei componenti, si attiva solo quando il componente viene montato 
     componentDidMount() {
         console.log('component did Mount')
 
