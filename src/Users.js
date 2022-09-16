@@ -12,12 +12,12 @@ class Users extends Component {
             //per renderla usufruibile all'interno dell'intero componente e non solo nell'evento onChange
             searchField: ''
         };
-        console.log('constructor')
+   
     }
 
     //metodo ciclo di vita dei componenti, si attiva solo quando il componente viene montato 
     componentDidMount() {
-        console.log('component did Mount')
+     
 
         fetch('https://jsonplaceholder.typicode.com/users')
             .then((response) => response.json())
@@ -27,7 +27,7 @@ class Users extends Component {
                     return { usersBand: musicBand}
                 },
                 ()=> {
-                    console.log(this.state)
+                    // console.log(this.state)
                 }
             ))
     }
@@ -42,7 +42,7 @@ class Users extends Component {
     //una volta aggiornato lo stato c'è di nuovo il rendering dell'UI
     //jsx è un'estensione della sintassi di js 
     render() {
-        console.log('render')
+   
 
         //inizializzo una costante 
         const {usersBand, searchField} = this.state;

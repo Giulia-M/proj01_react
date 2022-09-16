@@ -1,24 +1,21 @@
-import SearchBox from "./components/search-box/search-box.component";
-import CardList from "./components/card-list/card-list.component";
+
+import CardListfunc from "./components/card-list/card-list-functional.component";
+import SearchBoxFunctional from "./components/search-box/search-box-functional.component";
 import { useState, useEffect } from "react";
 const Componentefunzionale = () => {
-    console.log('render')
     const [searchField, setSearchField] = useState(''); // [value, setValue]
     const [usersBand, setUsersBand] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState(usersBand);
-    // console.log("searchField comp funzionale oggetto", {searchField}) //{searchField: 'a'}
-    console.log("searchField comp funzionale", searchField) // searchField comp funzionale a
-
-    console.log('render com fetch ');
+    console.log('rend')
     useEffect(()=> {
         const newFilteredBand = usersBand.filter((x) => {
             return x.name.toLocaleLowerCase().includes(searchField)});
             setFilteredUsers(newFilteredBand);
     }, [usersBand, searchField]);
 
-    useEffect(()=> {
-        console.log('render com fetch use effect');
 
+    //l'unica volta in cui dovrai chiamare questa callback è su mount, se un valore nelle dipendenze cambia, use effect cambierà questa funzione
+    useEffect(()=> {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((response) => response.json())
         //con setState aggiorniamo lo state con l'elenco originale completo 
@@ -27,7 +24,6 @@ const Componentefunzionale = () => {
     
     
     const onSearchChange = (event) => {
-
         const searchFieldString = event.target.value.toLocaleLowerCase();
         setSearchField(searchFieldString);
     }
@@ -37,8 +33,9 @@ const Componentefunzionale = () => {
     return (
         <div>
             <h1>Componente funzionale</h1>
-            <SearchBox className='search' onChangeHandler={onSearchChange} placeholder='search cantanti'/>
-            <CardList x={filteredUsers } anything={['a', 'b']} />
+           
+            <SearchBoxFunctional  className='search' onChangeHandler={onSearchChange} placeholder='search cantanti'/>
+            <CardListfunc x={filteredUsers } anything={['a', 'b']} />
         </div>
     )
 }

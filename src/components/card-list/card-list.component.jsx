@@ -4,8 +4,8 @@ import '../../css/card.styles.css';
 import Card from "../card/card.component";
 class CardList extends Component {
     render() {
-        console.log(this.props);
-        console.log('render from CardList')
+        // console.log(this.props);
+        // console.log('render from CardList')
 
         // come si può cambiare il valore delle props?
         console.log(this.props.x)
